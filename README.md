@@ -6,7 +6,7 @@ A hub i guess... that's what boredom does to me.
   * Auto stage
   * Next Stage
 
--[Escape Tsunami For Femboys!](roblox.com/games/127809219596493/Escape-Tsunami-For-Femboys):
+- [Escape Tsunami For Femboys!](roblox.com/games/127809219596493/Escape-Tsunami-For-Femboys):
   * Rebirth & Auto rebirth
   * Claim all rewards * Auto claim all rewards
   * Buy carry upgrade & Auto buy carry update
