@@ -29,13 +29,13 @@ shared.wind = {
 local library = requireFile('GuiLibrary')
 local brickColor = requireFile('BrickColor')
 local window = library:CreateWindow('Wind hub')
-local universalSection = window:CreateSection('Universal features')
+local playerSection = window:CreateSection('Player')
 local miscSection = window:CreateSection('Misc')
 
 shared.wind.library = library
 shared.wind.brickColor = brickColor
 shared.wind.window = window
-shared.wind.universalSection = universalSection
+shared.wind.playerSection = playerSection
 shared.wind.miscSection = miscSection
 
 local suffix = shared.manaDeveloper and 'raw' or 'obf'

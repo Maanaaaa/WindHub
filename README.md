@@ -24,3 +24,4 @@ A hub i guess... that's what boredom does to me.
   * Sell all & Auto sell all
   * Buy seeds & Auto buy seeds
   * Redeem all codes
+  * Teleport to seeds shop, gear shop, sell stand, quests and plots

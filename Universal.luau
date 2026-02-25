@@ -1,10 +1,10 @@
 local plrs = game:GetService('Players')
 local lplr = plrs.LocalPlayer
 
-local mana = shared.wind
-local library = mana.library
-local universalSection = mana.universalSection
-local miscSection = mana.miscSection
+local wind = shared.wind
+local library = wind.library
+local playerSection = wind.playerSection
+local miscSection = wind.miscSection
 
 local function getCharacter()
     return lplr.Character
@@ -18,7 +18,7 @@ local function getHumanoid()
     return getCharacter().Humanoid
 end
 
-universalSection:CreateSlider({
+playerSection:CreateSlider({
     Name = 'Walk speed',
     Min = 1,
     Max = 100,
@@ -28,7 +28,7 @@ universalSection:CreateSlider({
     end
 })
 
-universalSection:CreateSlider({
+playerSection:CreateSlider({
     Name = 'Jump power',
     Min = 1,
     Max = 200,
@@ -38,7 +38,7 @@ universalSection:CreateSlider({
     end
 })
 
-universalSection:CreateButton({
+playerSection:CreateButton({
     Name = 'Reset character',
     Callback = function()
         getHumanoid().Health = 0
