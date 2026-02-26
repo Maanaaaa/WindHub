@@ -26,7 +26,7 @@ A hub i guess... that's what boredom does to me.
   * Redeem all codes
   * Teleport to seeds shop, gear shop, sell stand, quests and plots
 
-  - [Spear Training](roblox.com/games/130594398886540/Garden-Horizons):
+ - [Spear Training](roblox.com/games/130594398886540/Garden-Horizons):
   * Throw & Auto throw
   * Train
   * Hatch egg & Auto hatch
