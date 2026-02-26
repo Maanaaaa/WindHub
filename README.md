@@ -27,12 +27,12 @@ A hub i guess... that's what boredom does to me.
   * Teleport to seeds shop, gear shop, sell stand, quests and plots
 
  - [Spear Training](roblox.com/games/130594398886540/Garden-Horizons):
-  * Throw & Auto throw
-  * Train
-  * Hatch egg & Auto hatch
-  * Unequip all pets
-  * Buy next spear & Auto buy spears
-  * Rebirth & Auto rebirth
-  * Spin & Auto spin
-  * Claim all rewards & Auto claim rewards
-  * Redeem all codes
+   * Throw & Auto throw
+   * Train
+   * Hatch egg & Auto hatch
+   * Unequip all pets
+   * Buy next spear & Auto buy spears
+   * Rebirth & Auto rebirth
+   * Spin & Auto spin
+   * Claim all rewards & Auto claim rewards
+   * Redeem all codes
