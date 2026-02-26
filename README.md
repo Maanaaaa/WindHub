@@ -6,7 +6,7 @@ A hub i guess... that's what boredom does to me.
   * Auto stage
   * Next Stage
 
-- [Escape Tsunami For Femboys!](roblox.com/games/127809219596493/Escape-Tsunami-For-Femboys):
+-[Escape Tsunami For Femboys!](roblox.com/games/127809219596493/Escape-Tsunami-For-Femboys):
   * Rebirth & Auto rebirth
   * Claim all rewards * Auto claim all rewards
   * Buy carry upgrade & Auto buy carry update
@@ -25,3 +25,14 @@ A hub i guess... that's what boredom does to me.
   * Buy seeds & Auto buy seeds
   * Redeem all codes
   * Teleport to seeds shop, gear shop, sell stand, quests and plots
+
+  - [Spear Training](roblox.com/games/130594398886540/Garden-Horizons):
+  * Throw & Auto throw
+  * Train
+  * Hatch egg & Auto hatch
+  * Unequip all pets
+  * Buy next spear & Auto buy spears
+  * Rebirth & Auto rebirth
+  * Spin & Auto spin
+  * Claim all rewards & Auto claim rewards
+  * Redeem all codes

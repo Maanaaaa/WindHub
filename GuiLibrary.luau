@@ -8,7 +8,7 @@ local players = game:GetService('Players')
 local lplr = players.LocalPlayer
 local coreGui
 
-local connections = shared.wind and shared.wind.connections or {}
+local connections = shared.wind.connections
 
 local suc, res = pcall(function()
     return game:GetService('CoreGui')
@@ -64,6 +64,9 @@ function library:Destruct()
     for _, connection in next, connections do
         connection:Disconnect()
     end
+    for _, connection in next, shared.wind.connections do
+        connection:Disconnect()
+    end
     screenGui:Destroy()
 end
 
@@ -103,6 +106,7 @@ function library:CreateWindow(name)
     }
     local window = {
         name = name,
+        expanded = true,
         sections = {}
     }
     table.insert(self.windows, window)
@@ -147,6 +151,16 @@ function library:CreateWindow(name)
     end
 
     table.insert(connections, uiList:GetPropertyChangedSignal('AbsoluteContentSize'):Connect(window.ReSize))
+    table.insert(connections, close.MouseButton1Click:Connect(function()
+        window.expanded = not window.expanded
+        close.Text = window.expanded and '-' or '+'
+        container.Visible = window.expanded
+        if window.expanded then
+            window:ReSize()
+        else
+            background.Size = UDim2.fromOffset(180, 25)
+        end
+    end))
 
     function window:CreateSection(name)
         local section = {
@@ -217,7 +231,7 @@ function library:CreateWindow(name)
         end))
 
         -- // ONLY FOR DEV TIME
-        --section:Expand()
+        if shared.manaDeveloper then section:Expand() end
 
         function section:CreateToggle(argstable)
             local name = argstable.Name
@@ -407,7 +421,7 @@ function library:CreateWindow(name)
                 if self.knobPositionTween then self.knobPositionTween:Cancel() end
                 value = value or min
                 local sizeValue = math.floor((math.clamp(value, min, max) * (10 ^ decimal)) + 0.5) / (10 ^ decimal)
-                self.Value = sizeValue
+                self.Value = value
                 local tween = tweenService:Create(line, TweenInfo.new(0.2), {Size = UDim2.fromScale((sizeValue - min) / (max - min), 1)}):Play()
                 self.lineTween = tween
                 local tween = tweenService:Create(knob, TweenInfo.new(0.2), {Position = UDim2.new((sizeValue - min) / (max - min), -6, -0.75, 0)}):Play()
@@ -417,15 +431,15 @@ function library:CreateWindow(name)
             end
 
             local function slide(input)
-                if self.lineTween then self.lineTween:Cancel() end
-                if self.knobPositionTween then self.knobPositionTween:Cancel() end
+                if slider.lineTween then slider.lineTween:Cancel() end
+                if slider.knobPositionTween then slider.knobPositionTween:Cancel() end
                 local sizeX = math.clamp((input.Position.X - lineBackground.AbsolutePosition.X) / lineBackground.AbsoluteSize.X, 0, 1)
                 local value = math.floor(((((max - min) * sizeX) + min) * (10 ^ decimal)) + 0.5) / (10 ^ decimal)
-                self.Value = value
+                slider.Value = value
                 local tween = tweenService:Create(line, TweenInfo.new(0.2), {Size = UDim2.fromScale(sizeX, 1)}):Play()
-                self.lineTween = tween
+                slider.lineTween = tween
                 local tween = tweenService:Create(knob, TweenInfo.new(0.2), {Position = UDim2.new(sizeX, -6, -0.75, 0)}):Play()
-                self.knobPositionTween = tween
+                slider.knobPositionTween = tween
                 textbox.PlaceholderText = tostring(value)
                 callback(value)
             end
